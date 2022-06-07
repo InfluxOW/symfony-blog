@@ -7,14 +7,16 @@
         "php": ">=8.1",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "doctrine/doctrine-bundle": "^2.6",
+        "doctrine/doctrine-migrations-bundle": "^3.2",
+        "doctrine/orm": "^2.12",
         "symfony/console": "*",
         "symfony/dotenv": "*",
         "symfony/flex": "^2",
         "symfony/framework-bundle": "*",
+        "symfony/proxy-manager-bridge": "6.1.*",
         "symfony/runtime": "*",
         "symfony/yaml": "*"
-    },
-    "require-dev": {
     },
     "config": {
         "allow-plugins": {
@@ -65,7 +67,11 @@
     "extra": {
         "symfony": {
             "allow-contrib": false,
-            "require": "6.1.*"
+            "require": "6.1.*",
+            "docker": true
+        },
+        "runtime": {
+            "dotenv_overload": true
         }
     }
 }
